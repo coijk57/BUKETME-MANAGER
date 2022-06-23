@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 참조 slick(슬라이드)파일 경로================================================================ -->
+	<link rel="stylesheet" type="text/css" href="../css/MovieCss/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MovieCss/slick/slick-theme.css"/>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../css/MovieCss/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../js/MovieJS/maincontentslist.js"></script>
+<!-- 참조 장르, 추천순 버튼 자바스크립트 경로============================================================ -->	
+	<script type="text/javascript" src="../js/MovieJS/MovieJS.js"></script>
+<!-- ======================================================================================== -->
+
+<!-- 참조 css파일 경로============================================= -->
+<link rel="stylesheet"  href="../css/MovieCss/Movie.css"/>
+<link rel="stylesheet" href="../css/MovieCss/moviemodal.css">
+<!-- ========================================================== -->
+
+<title>Movie</title>
+</head>
+
+<body id="body">
+
+<!--==============모달창 폼======================================================================================  -->
+	<a href="#x" class="overlay" id="moviedetail"></a>
+	<div class="popup">
+<!-- 		<div class="popup_wrapper"> -->
+			<div class="modalvideo">
+				<video class="trailers" muted="muted" controls="controls" autoplay="autoplay" loop="loop">
+					<source src="../video/mainpagebackground/matrix.mov" type="video/mp4">
+				</video>
+			</div>
+			<div class="explain_wrapper">
+				<div class="modalvideo_explain">
+					<p>
+						눈을 떠보니 세상은 좀비가 점령한 전쟁터. 어디로 갈 것인가, 어떻게 생존 할 것 인가.현실이 지옥일 때 희망은 의미가 있는가. 
+						살아남은 자들의 사투가 펼쳐진다.눈을 떠보니 세상은 좀비가 점령한 전쟁터. 어디로 갈 것인가, 어떻게 생존 할 것 인가.	
+						현실이 지옥일 때 희망은 의미가 있는가. 살아남은 자들의 사투가 펼쳐진다.눈을 떠보니 세상은 좀비가 점령한 전쟁터. 
+						어디로 갈 것인가, 어떻게 생존 할 것 인가.	현실이 지옥일 때 희망은 의미가 있는가. 살아남은 자들의 사투가 펼쳐진다.
+					</p>
+				</div>
+				<div class="modalvideo_explain2">
+					<p>출연 : 최우식,김다미,김성철...</p>
+					<p>장르 : 로맨틱 코미디 시리즈, 한국 드라마, 코미디 시리즈</p>
+					<p>시리즈 특징 : 힐링, 거부할 수 없는 이끌림, 로맨틱</p>
+					<div class="button_wrapper">
+						<button onclick="location.href='Movie.html'" type="button" class="modalbtn"><i class="fas fa-exclamation-circle"></i> 상세 정보</button>
+					</div>
+				</div>
+			</div>
+<!-- 		</div> -->
+            <a class="close" href="#close"></a>
+    </div>
+<!--==============모달창 폼======================================================================================  -->
+
+<header id="header">
+	<div class="Bucketme-Logo-Menu">
+		<div class="Bucketme-Logo">
+	        <a href="#" class="logo-area">
+	        	<img class="Logo" src="../img/Logo.png" alt="버켓미 로고"/>
+	        </a>
+	    </div>
+	    <div class="Bucketme-Menu">
+			<a href="#" class="logo-area">홈</a>
+			<a href="#" class="logo-area">시리즈</a>
+			<a href="#" class="logo-area">영화</a>
+			<a href="#" class="logo-area">방영 예정 컨텐츠</a>
+			<a href="#" class="logo-area">마이 컨텐츠</a>    
+	    </div>
+	</div>
+<div class="MovieNavArea">
+			<div class="Movie">
+				<h1>영화</h1>
+			</div>
+			<div class="MovieNav">
+				<div class="dropdown">
+				  <button onclick="myFunction()" class="dropbtn">장르▼</button>
+					  <div id="myDropdown" class="dropdown-content">
+						<div>
+							<a href="#">한국 영화</a>
+							<a href="#">미국 영화</a>
+							<a href="#">해외</a>
+							<a href="#">어워드 수상</a>
+							<a href="#">인디</a>
+							<a href="#">어린이&가족</a>
+							<a href="#">애니메이션</a>
+						</div>
+						<div>
+							<a href="#">액션</a>
+							<a href="#">코미디</a>
+							<a href="#">로맨스</a>
+							<a href="#">호러</a>
+							<a href="#">SF</a>
+							<a href="#">판타지</a>
+						</div>
+						<div>
+							<a href="#">드라마 장르</a>
+							<a href="#">범죄</a>
+							<a href="#">다큐멘터리</a>
+							<a href="#">음악/뮤지컬</a>
+							<a href="#">고전</a>
+						</div>
+					  </div>
+				</div>
+				<div class="dropdown2">
+				  <button onclick="myFunction2()" class="dropbtn2">추천순▼</button>
+					  <div id="myDropdown2" class="dropdown-content2">
+						<div>
+							<a href="#">추천순</a>
+							<a href="#">평점별점 순</a>
+							<a href="#">최신작품 순</a>
+							<a href="#">상영시간 짧은순</a>
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+</header>
+
+<section id="section">
+	<div class="main_wrapper">
+		<div class="movie_ad">
+			<video class="trailers" muted="muted" controls="controls" autoplay="autoplay" loop="loop">
+				<source src="../video/mainpagebackground/matrix.mov" type="video/mp4">
+			</video>
+		</div>
+		<div class="movie_explain_wrapper">
+				<div class="movie_title">
+					<h1 class="title">스파이더맨</h1>
+				</div>
+				<div class="movie_summary">
+					<p>눈을 떠보니 세상은 좀비가 점령한 전쟁터. 어디로 갈 것인가, 어떻게 생존 할 것 인가. 현실이 지옥일 때 희망은 의미가 있는가. 살아남은 자들의 사투가 펼쳐진다.</p>
+				</div>
+				<div class="movie_play">
+<!-- 					<button type="button">
+						<i class="fas fa-play">재생</i>
+					</button> -->					
+					<button onclick="location.href='Movie.html'" type="button" class="modalbtn"><i class="fas fa-exclamation-circle"></i> 상세 정보</button>
+				</div>
+		</div>
+		<div class="movie_list_wrapper">
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">ㅇㅇㅇ님이 시청 중인 콘텐츠</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;"> 모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my5.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my4.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my3.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my2.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my1.png">
+						</a>
+					</div>					
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>	
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">한국 영화</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;"> 모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my5.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my4.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my3.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my2.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my1.png">
+						</a>
+					</div>					
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">미국 영화</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;"> 모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my5.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my4.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my3.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my2.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my1.png">
+						</a>
+					</div>					
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">해외</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;"> 모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my5.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my4.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my3.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my2.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my1.png">
+						</a>
+					</div>					
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">어워드 수상</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;">모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my5.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my4.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my3.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my2.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my1.png">
+						</a>
+					</div>					
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>
+			<div class="usermovie_list">
+				<div class="movie_list_title">
+					<div>
+						<a class="title1" href="javascript:;">인디</a>
+					</div>
+					<div>
+						<a class="more" href="javascript:;">모두 보기</a>
+					</div>
+				</div>
+				<div class="movie_contents_list">
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my10.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my9.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my8.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my7.png">
+						</a>
+					</div>
+					<div>
+						<a href="#moviedetail" id="moviedetail">
+							<img class="imgsize" src="../img/my6.png">
+						</a>
+					</div>
+				
+				</div>
+				<div class="loading_bar">
+						로딩바
+				</div>
+			</div>
+		</div>
+
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>

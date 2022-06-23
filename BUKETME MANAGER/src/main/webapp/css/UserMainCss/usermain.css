@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.main_wrapper {
+/* 	border: solid 5px black; */
+	background: #041c32;
+    
+}
+
+.main_wrapper .movie_ad {
+/* 	border: solid 2px black;		//동영상 삽입 전 CSS
+	padding: 10px;
+	height: 400px; */
+    width: 100%;
+    /* padding: 10px; */
+    height: 640px;
+    overflow: hidden;
+    margin: 0px auto;
+    position: relative;
+}
+
+.trailers {
+	width: 100%;
+}
+
+.movie_ad .movie_explain_wrapper {
+/* 	border: solid 2px black;         //동영상 삽입 전 CSS
+	float: right;
+	width: 300px;
+	height: 300px; */
+    border: solid 2px black;
+    position: absolute;
+    float: right;
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 80%;
+}
+
+.movie_explain_wrapper > div { 	/* 영역 확인  */
+	margin: 3px;
+	border: solid 2px black;
+}
+
+.movie_list_wrapper {
+	/* border: solid 3px black; */
+}
+
+.usermovie_list {
+	border: solid 2px black;
+	margin: 3px;
+}
+
+.usermovie_list .movie_list_title {
+	border: solid 1px black;
+	padding: 3px;
+}
+
+/* .movie_list_title > a {
+	text-decoration: none;
+}
+
+.movie_list_title > a:link {
+	text-decoration: none;
+	color: black;
+}
+
+.movie_list_title > a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.movie_list_title > a:hover {
+	text-decoration: none;
+	color: black;
+} */
+
+.movie_list_title a, .movie_list_title a:link, .movie_list_title a:visited, .movie_list_title a:hover {
+	text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.usermovie_list .movie_contents_list {
+	border: solid 1px black;
+	padding: 3px;
+}
+
+.loading_bar {
+	color: white;
+	border: solid 1px black;
+}
+
+.movie_contents_list > img {
+	width: 100px;
+	height: 60px;
+}
+
+.imgsize {
+	width: 100px;
+	height: 60px;
+}
+.movie_contents_list > a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

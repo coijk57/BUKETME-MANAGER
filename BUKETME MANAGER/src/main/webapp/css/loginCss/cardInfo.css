@@ -1,0 +1,205 @@
+body{
+    margin: 0px;
+    color: #fff;
+    background-color: rgb(26, 29, 41);
+}
+
+a {
+    text-decoration: none;
+}
+
+.middleContainer{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 1100px;
+    padding-bottom: 95px;
+    background-color: rgb(26, 29, 41);
+}
+.centerContainer{
+    margin: 120px auto 15px auto;
+    padding: 20px;
+    max-width: 978px;
+    box-sizing: border-box;
+}
+.payInfoContainer{
+    text-align: left;
+    max-width: 445px;
+    margin: 0 auto;
+}
+.payFormInfo{
+    margin-top: 40px;
+    text-align: left;
+}
+
+.titleContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleName{
+    display: inline-block;
+    margin: 0 0 0 0.4em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.payCompanyLogo{
+    display: inline-block;
+    width: 440px;
+    height: 27px;
+}
+
+.writeInfoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.writeInfoContainer h4 {
+    margin: 0;
+}
+
+/*.writeInfo{*/
+/*    height: 60px;*/
+/*    width: 440px;*/
+/*    cursor: text;*/
+/*    margin-top: 10px;*/
+/*    border: 1px solid #FFFFFF;*/
+/*    color: #fff;*/
+/*    background-color: transparent;*/
+/*}*/
+
+.writeInfo{
+    width: 403px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+
+.membershipInfoPrice{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.membershipInfoName{
+    font-size: 16px;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+.membershipContent{
+    /*margin-top: 10px;*/
+    height: 72px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px 14px;
+    box-sizing: border-box;
+    /*background-color: #f1592a;*/
+    margin-right: 0px;
+}
+
+.membershipContentMod{
+    /*margin-top: 10px;*/
+    height: 72px;
+    width: 60px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.membershipInfo{
+    margin-top: 10px;
+}
+
+.allAgreeCheckbox{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.75em;
+    margin-bottom: 1.5rem;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.agreeList{
+    padding-left: 0px;
+}
+
+.agreeListContent{
+    margin-top: 5px;
+}
+
+.membershipStartBtn{
+    min-height: 64px;
+    font-weight: 700;
+    font-size: 24px;
+    width: 440px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #f1592a;
+    cursor: pointer;
+}
+
+.membershipContainer{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 72px;
+    background-color: #f1592a;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    top: 1250px;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(26, 29, 41);
+    /*border-top: 1px solid white;*/
+}
+
+.footer-area {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px 45px;
+}
+
+.footer-top {
+    margin-bottom: 30px;
+}
+
+.footer-link-list {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 35px auto;
+    padding: 0px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.link-list-item {
+    padding: 0;
+    margin: 0px 10px 10px 0px;
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.footer-copy-text {
+    font-size: 10px;
+}
